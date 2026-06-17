@@ -6,7 +6,7 @@ Welcome to my cybersecurity portfolio.
 
 ### Projects
 
-- LinkedIn Visibility Engagement Report
+- - [LinkedIn Visibility Engagement Report](projects/linkedin-visibility-report/report.md)
 - Network Scanning Lab
 - Wireshark Analysis
 - Burp Suite Testing
