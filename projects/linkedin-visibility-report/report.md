@@ -12,7 +12,7 @@ The objective of this project was to improve my LinkedIn visibility and track en
 
 I uploaded a post and monitored the engagement.
 
-(Add screenshot below)
+![LinkedIn Report](Screenshot_2026-06-17_11_08_57.png)
 
 ## What I Did
 
