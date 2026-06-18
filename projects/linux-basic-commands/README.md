@@ -1,78 +1,78 @@
-#Linux Basic Commands
+### Linux Basic Commands
 
-##Objective
+## Objective
 
 The objective of this project was to learn and practice basic Linux commands used in cybersecurity and system administration.
 
-##Command 1: cd ~
+## Command 1: cd ~
 
-##What the command does
+## What the command does
 
 The `cd ~` command changes the current directory to the user's home directory.
 
-##Screenshot
+## Screenshot
 
 ![cd home command](screenshots/Screenshot%202026-06-18%20124838.png)
 
-##Command 2: mkdir
+## Command 2: mkdir
 
-##What  the  command does
+## What  the  command does
 
 The ` mkdir` command is used to creat directories/folders
 for this lab we will create a folder called cyberlab
 
-##Screenshot 
+## Screenshot 
 
 ![mkdir command](screenshots/Screenshot%202026-06-18%20124854.png)
 
-##Command 3: cd 
+## Command 3: cd 
 
-##What  the command does 
+## What  the command does 
 
 The `cd` command is used to change directories and move through the Linux file system.
 For this lab we will our directory to to cyberlab
 
-##Screenshot 
+## Screenshot 
 
 ![cd command](screenshots/Screenshot%202026-06-18%20104701.png)
 
-##Command 4: pwd
+## Command 4: pwd
 
-##What the command does 
+## What the command does 
 The `pwd` command displays the current working directory.
 
-##Screenshot
+## Screenshot
 
 ![pwd command](screenshots/Screenshot%202026-06-18%20115855.png)
 
-##Comand 5: touch 
+## Comand 5: touch 
 
-##what the command does 
+## what the command does 
 
 The `touch` command creates a new empty file.
 For this lab we will create three empty files 
 
-##Screenshot 
+## Screenshot 
 
 ![touch command](screenshots/Screenshot%202026-06-18%20115914.png)
 
-#Command 6: ls 
+## Command 6: ls 
 
-##what the command does 
+## what the command does 
 
 The `ls` command lists files and directories in the current folder.
 
-##Screenshot 
+## Screenshot 
 
 ![ls command](screenshots/Screenshot%202026-06-18%20115927.png)
 
-##Command 7: ls -l
+## Command 7: ls -l
 
-##What the command does 
+## What the command does 
 
 The `ls -l` command displays files and directories in a detailed format, including permissions, ownership, file size, and modification date.
 
-##Screenshot 
+## Screenshot 
 
 ![ls -l command](screenshots/Screenshot%202026-06-18%20115950.png)
 ![ls -l command](screenshots/Screenshot%202026-06-18%20120012.png)
@@ -87,14 +87,14 @@ This command writes the text "I love cyber security" into a file called `notes.t
 
 ![echo command](screenshots/Screenshot%202026-06-18%20120025.png)
 
-##Command 9: cat 
+## Command 9: cat 
 
-##What the command does 
+## What the command does 
 
 The `cat` command displays the contents of a file.
 For this lab we will display the contents in notes.txt
 
-##Screenshot 
+## Screenshot 
 
 ![cat command](screenshots/Screenshot%202026-06-18%20120037.png)
 
@@ -108,7 +108,7 @@ This command appends the text "python is the best programming language" to the e
 
 ![echo append command](screenshots/Screenshot%202026-06-18%20120144.png)
 
-##Lastly 
+## Lastly 
 
 We  will display the data in notes.txt after we have appended it 
 
