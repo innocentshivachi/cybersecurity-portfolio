@@ -10,7 +10,7 @@ https://www.linkedin.com/in/innocent-shivachi/
 
 ## Screenshot 1
 
-![Engagement Screenshot](Screenshot_2026-06-17_11_08_57.png)
+![Engagement Screenshot](screenshots/Screenshot_2026-06-17_11_08_57.png)
 
 ### What I Did
 
@@ -24,11 +24,13 @@ Recruiters often search using keywords. Optimizing the profile helps improve vis
 
 ## Screenshot 2
 
-![Second Screenshot](Screenshot_2026-06-17_11_09_46.png)
+![Second Screenshot](screenshots/Screenshot_2026-06-17_11_09_46.png)
 
 ### What Happened
 
 The profile received increased visibility and engagement.
+
+![Third Screenshot](screenshots/Screenshot_2026-06-17_11_12_08.png)
 
 ### Evidence
 
