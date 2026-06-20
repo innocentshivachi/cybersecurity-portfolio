@@ -83,7 +83,7 @@ The `ls -l` command displays files and directories in a detailed format, includi
 
 This command writes the text "I love cyber security" into a file called `notes.txt`. If the file does not exist, Linux creates it automatically.
 
-### Screenshot  https://github.com/innocentshivachi/cybersecurity-portfolio/blob/main/projects/linux-basic-commands/screenshots/Screenshot%202026-06-18%20120025.png
+### Screenshot  
 
 ![echo command](screenshots/Screenshot%202026-06-18%20120025.png)
 
