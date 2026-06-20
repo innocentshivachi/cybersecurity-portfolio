@@ -114,8 +114,6 @@ We  will display the data in notes.txt after we have appended it
 
 ![cat command](screenshots/Screenshot%202026-06-18%20120157.png)
 
-print("Hello  World")
-
 
 
 
