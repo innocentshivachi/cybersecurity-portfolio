@@ -29,7 +29,7 @@ nmap -Pn 10.49.160.102
 
 ### Results
 
-![Nmap scan](screenshots/picture1png)
+![Nmap scan](screenshots/picture1.png)
 
 The scan revealed a web server running on port 80 and Remote Desktop Protocol on port 3389.
 
