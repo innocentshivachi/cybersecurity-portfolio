@@ -163,6 +163,8 @@ After successful login, I located and retrieved the `user.txt` flag.
 
 During further investigation, I discovered a restricted file containing sensitive information. After adjusting permissions and reviewing its contents, I obtained the administrator password.
 
+![Admin password](screenshots/picture10.png)
+
 Using this, I escalated privileges to the administrator account.
 
 ```bash
