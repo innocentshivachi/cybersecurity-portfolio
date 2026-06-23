@@ -1,27 +1,36 @@
-
 # TryHackMe - Anthem Writeup
 
-
 ## Room Information
-*Exploit a Windows machine in this beginner level challenge.
+
+Anthem is a beginner-level TryHackMe Windows machine focused on web enumeration, credential discovery, and basic privilege escalation.
+
+---
 
 ## Objective
 
-The objective of this room was to perform reconnaissance, enumerate services, discover credentials, and gain access to the target machine.
+The objective of this room was to perform reconnaissance, enumerate services, discover credentials, and gain access to the target machine, followed by privilege escalation to obtain the root flag.
+
+---
+
+## Tools Used
+
+* Nmap
+* Curl
+* Web browser
+* xfreerdp
 
 ---
 
 ## Task 1: Reconnaissance
 
-## What port is for the web server?
+### Questions
 
-## What port is for remote desktop service?
+* What port is for the web server?
+* What port is for remote desktop service?
 
 ### Nmap Scan
 
 I started by scanning the target machine to identify open ports and running services.
-
-Command used:
 
 ```bash
 nmap -Pn 10.49.160.102
@@ -29,147 +38,156 @@ nmap -Pn 10.49.160.102
 
 ### Results
 
-![Nmap scan](screenshots/picture1.png)
+The scan identified:
 
-The scan revealed a web server running on port 80 and Remote Desktop Protocol on port 3389.
+* Port 80 → HTTP (Web Server)
+* Port 3389 → RDP (Remote Desktop Protocol)
+
+![Nmap Scan](screenshots/picture1.png)
 
 ---
 
-### Task 2: Web Enumeration
+## Task 2: Web Enumeration
 
-## What is a possible password in one of the pages web crawlers check for?
+### Questions
 
-## What CMS is the website using? 
+* What is a possible password found in web crawler pages?
+* What CMS is the website using?
 
-## Robots.txt Analysis
+### Robots.txt Analysis
 
-I request the robots.txt file from the web server at 10.49.160.102 and display its contents in the terminal
+To identify hidden or sensitive directories, I checked the `robots.txt` file.
 
-Command Used:
-   ~ curl -s http://10.49.160.102/robots.txt ~ 
+```bash
+curl -s http://10.49.160.102/robots.txt
+```
 
-## Results 
+### Results
 
-![Web  enumaration](screenshots/picture2.png)
+The file contained entries that hinted at hidden paths and potential useful information for further enumeration.
 
+![Robots.txt Results](screenshots/picture2.png)
 
-###  Task 3: Web Inspection
+---
 
-## What is the domain of the website?
+## Task 3: Web Inspection
 
-I accesed  the website at ~ http://10.49.160.102 ~ and viewed the pages
+### Question
 
-## Results 
+* What is the domain of the website?
 
-![Web Inpection](screenshots/picture3.png)
+I accessed the web server at `http://10.49.160.102` and inspected the page source code for hidden information such as comments, metadata, and possible credentials.
 
+### Results
 
+The page source contained useful information that helped during later enumeration steps.
 
+![Web Inspection](screenshots/picture3.png)
 
-### Task 4: Credential Discovery
+---
 
-  ## What's the name of the Administrator
+## Task 4: Credential Discovery
 
-  ## Results 
+### Questions
 
-  On investigating we foung out some information where we could get the admin  name's
+* What is the name of the Administrator?
+* Can we find the administrator email address?
 
-  ![Admin name](screenshots/picture4.png)
+During web enumeration, I identified information revealing the administrator’s identity.
 
-  So using the above information we on to web and search for them and found the admin's name 
+By analyzing the website content and applying a common naming pattern (e.g., initials-based email format), I was able to determine the administrator’s email structure.
 
-  ![Admin name](screenshots/picture.png)
+### Results
 
-  ## Can we find find the email address of the administrator?
+* Administrator name discovered from website content
+* Email format inferred and reconstructed based on naming convention
 
-  Using the information from the website we found out that the email of users are in this form 
-  ( Jane  Doe , the email will be JD@anthem.com) so using the admin's name we found his email
+![Admin Info](screenshots/picture4.png)
 
-  ![Admin email](screenshots/picture5.png)
+---
 
-  
+## Task 5: Flag Collection
 
-### Task 5: Flg  Collection
+### Flag 1
 
-  Here the task was to find flag1, flag2 and flag 3 which were left by the admin 
+Found by inspecting the page source of the website.
 
-  ##  Flag 1
+![Flag 1](screenshots/picture6.png)
 
-  For flag one  I inspected the website by viewing the page source of the website 
+---
 
-  ![Flag 1](screenshots/picture6.png)
+### Flag 2
 
-  ##  Flag  2
+Discovered through further analysis of hidden content within the website source code.
 
-  For  the second  flag I went further on inspecting the page source of the website and I found the  website 
+![Flag 2](screenshots/picture7.png)
 
-  ![Flag 2](screenshots/picture7.png)
+---
 
-  ## Flag 3 
+### Flag 3
 
-  For the third  flag  I was supposed to find it on one of the profiles of the website that is Jane Doe's profile 
+Located within a user profile page after further enumeration of website content.
 
-  ![Flag 3](screenshots/picture13.png)
+![Flag 3](screenshots/picture13.png)
 
-  ## Flag  4
+---
 
-  Flag 4 was a bit diffent since you were to change the web pages and view their page source to find the flag
+### Flag 4
 
-  ![Flag 4](screenshots/picture8.png)
+Found by modifying and inspecting different web pages and reviewing their source code.
 
+![Flag 4](screenshots/picture8.png)
 
-### Task 6 :  Remote  Access 
+---
 
-  ## Gain initial access to the machine, what is the contents of user.txt?
+## Task 6: Initial Access
 
-  Using the discovered credentials, I connected to the target through Remote Desktop Protocol (RDP).
+Using discovered credentials, I established a remote desktop connection to the target machine.
 
-Command used: 
+```bash
+xfreerdp /v:10.49.160.102 /u:<USERNAME> /p:<REDACTED_PASSWORD>
+```
 
-  xfreerdp /v:10.49.160.102  /u:sg /p:UmbracoIsTheBest! 
+After successful login, I located and retrieved the `user.txt` flag.
 
-  ![xfreerdp command](screenshots/picture14.png)
+![RDP Access](screenshots/picture9.png)
 
-  ## Results 
+---
 
-   After I gained access of the machine, I searched for the user.txt file and found the flag 
+## Task 7: Privilege Escalation
 
+### Question
 
-   ![Remote acces](screenshots/picture9.png)
+* Can we spot the admin password?
+* What is the contents of root.txt?
 
-## Can we spot the admin password?
+During further investigation, I discovered a restricted file containing sensitive information. After adjusting permissions and reviewing its contents, I obtained the administrator password.
 
-Now this one required one to first find the hidden file and then change the permision of that file so as the 'solomon' could
-also acces it since the restore.txt file was only accesed by the admin
+Using this, I escalated privileges to the administrator account.
 
-  ## Results 
-  ![SG Accessing](screenshots/picture10.png)
+```bash
+xfreerdp /v:10.49.160.102 /u:administrator /p:<REDACTED_PASSWORD> /cert:ignore
+```
 
+### Results
 
-## Escalate your privileges to root, what is the contents of root.txt?
+After gaining administrator access, I was able to retrieve the `root.txt` flag.
 
-  Using the  admin password we got from restore.txt file I was able to escalate m privilages to admins 
+![Root Access](screenshots/picture12.png)
 
-Command used :
-
-  xfeerdp /v:10.49.160.102 /u:administrator /p:ChangeMeBaby1MoreTime /cert:ignore +clipboard /dynamic-resolution
-
-  ![Root command](screenshots/picture11.png)
-
-## Results 
-
-  I gained access to the system as an administrator , hence i was able to read the contents of root.txt
-
-  ![Admin Acces](screenshots/picture12.png)
+---
 
 ## Lessons Learned
 
-* Importance of reconnaissance
-* Service enumeration techniques
-* Discovering credentials from publicly accessible information
-* Basic RDP access and navigation
-* Flag hunting methodology
+* Importance of thorough reconnaissance
+* Effective web enumeration techniques
+* Identifying hidden information in page sources
+* Credential discovery from exposed content
+* Basic privilege escalation concepts in Windows environments
+
+---
 
 ## Conclusion
 
-This room demonstrated the importance of careful enumeration and how seemingly small pieces of information can lead to full system access.
+This room demonstrated how small pieces of exposed information during web enumeration can lead to full system compromise. Proper enumeration and attention to detail were key to completing the machine successfully.
+
