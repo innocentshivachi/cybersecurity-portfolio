@@ -1,23 +1,14 @@
-
-
 # Linux Basic Commands
 
-## Project Overview
+## Objective
 
-This project demonstrates the use of fundamental Linux commands commonly used in system administration and cybersecurity. The commands covered include directory navigation, file creation, file management, and viewing file contents.
-
-## Environment
-
-* Operating System: Kali Linux
-* Shell: Bash Terminal
+The objective of this project was to learn and practice basic Linux commands commonly used in cybersecurity and system administration.
 
 ---
 
-# Directory Navigation
+## Command 1: `cd ~`
 
-## Command: `cd ~`
-
-### Description
+### What the Command Does
 
 The `cd ~` command changes the current working directory to the user's home directory.
 
@@ -27,37 +18,11 @@ The `cd ~` command changes the current working directory to the user's home dire
 
 ---
 
-## Command: `cd cyberlab`
+## Command 2: `mkdir cyberlab`
 
-### Description
+### What the Command Does
 
-The `cd` command is used to change directories. In this example, it is used to navigate into the `cyberlab` directory.
-
-### Screenshot
-
-![cd command](screenshots/Screenshot%202026-06-18%20104701.png)
-
----
-
-## Command: `pwd`
-
-### Description
-
-The `pwd` (Print Working Directory) command displays the full path of the current directory.
-
-### Screenshot
-
-![pwd command](screenshots/Screenshot%202026-06-18%20115855.png)
-
----
-
-# File and Directory Management
-
-## Command: `mkdir cyberlab`
-
-### Description
-
-The `mkdir` command creates a new directory. In this lab, a directory named `cyberlab` was created.
+The `mkdir` command is used to create directories. In this lab, a directory named `cyberlab` was created.
 
 ### Screenshot
 
@@ -65,11 +30,35 @@ The `mkdir` command creates a new directory. In this lab, a directory named `cyb
 
 ---
 
-## Command: `touch`
+## Command 3: `cd cyberlab`
 
-### Description
+### What the Command Does
 
-The `touch` command creates new empty files. In this lab, multiple files were created for practice purposes.
+The `cd` command is used to change directories and move through the Linux file system. In this lab, it was used to navigate into the `cyberlab` directory.
+
+### Screenshot
+
+![cd command](screenshots/Screenshot%202026-06-18%20104701.png)
+
+---
+
+## Command 4: `pwd`
+
+### What the Command Does
+
+The `pwd` (Print Working Directory) command displays the full path of the current working directory.
+
+### Screenshot
+
+![pwd command](screenshots/Screenshot%202026-06-18%20115855.png)
+
+---
+
+## Command 5: `touch`
+
+### What the Command Does
+
+The `touch` command creates new empty files. In this lab, three empty files were created.
 
 ### Screenshot
 
@@ -77,11 +66,11 @@ The `touch` command creates new empty files. In this lab, multiple files were cr
 
 ---
 
-## Command: `ls`
+## Command 6: `ls`
 
-### Description
+### What the Command Does
 
-The `ls` command lists all files and directories in the current location.
+The `ls` command lists files and directories in the current directory.
 
 ### Screenshot
 
@@ -89,13 +78,13 @@ The `ls` command lists all files and directories in the current location.
 
 ---
 
-## Command: `ls -l`
+## Command 7: `ls -l`
 
-### Description
+### What the Command Does
 
 The `ls -l` command displays files and directories in a detailed format, including permissions, ownership, file size, and modification dates.
 
-### Screenshots
+### Screenshot
 
 ![ls -l command](screenshots/Screenshot%202026-06-18%20115950.png)
 
@@ -103,13 +92,11 @@ The `ls -l` command displays files and directories in a detailed format, includi
 
 ---
 
-# Working with File Contents
+## Command 8: `echo "I love cyber security" > notes.txt`
 
-## Command: `echo "I love cyber security" > notes.txt`
+### What the Command Does
 
-### Description
-
-This command writes text to a file. If the file does not exist, Linux automatically creates it.
+This command writes the text `"I love cyber security"` into a file named `notes.txt`. If the file does not exist, it is created automatically.
 
 ### Screenshot
 
@@ -117,11 +104,11 @@ This command writes text to a file. If the file does not exist, Linux automatica
 
 ---
 
-## Command: `cat notes.txt`
+## Command 9: `cat notes.txt`
 
-### Description
+### What the Command Does
 
-The `cat` command displays the contents of a file directly in the terminal.
+The `cat` command displays the contents of a file in the terminal. In this lab, it was used to view the contents of `notes.txt`.
 
 ### Screenshot
 
@@ -129,11 +116,11 @@ The `cat` command displays the contents of a file directly in the terminal.
 
 ---
 
-## Command: `echo "python is the best programming language" >> notes.txt`
+## Command 10: `echo "python is the best programming language" >> notes.txt`
 
-### Description
+### What the Command Does
 
-The `>>` operator appends text to an existing file without overwriting its contents.
+This command appends the text `"python is the best programming language"` to the end of the file `notes.txt` without overwriting the existing contents.
 
 ### Screenshot
 
@@ -141,11 +128,11 @@ The `>>` operator appends text to an existing file without overwriting its conte
 
 ---
 
-## Viewing the Updated File
+## Final Output
 
-### Description
+### What Was Done
 
-After appending additional text, the contents of the file were displayed again using the `cat` command.
+After appending additional text to the file, the `cat` command was used again to verify the updated contents of `notes.txt`.
 
 ### Screenshot
 
@@ -153,75 +140,17 @@ After appending additional text, the contents of the file were displayed again u
 
 ---
 
-## Key Skills Demonstrated
+## Key Skills Learned
 
-* Linux directory navigation
-* Creating and managing directories
-* Creating files
+* Navigating the Linux file system
+* Creating directories and files
 * Listing files and directories
-* Viewing file permissions
+* Viewing file information and permissions
 * Reading file contents
-* Writing and appending data to files
+* Writing and appending text to files
 
 ---
 
 ## Conclusion
 
-This project provided practical experience with essential Linux commands used in everyday system administration and cybersecurity tasks. Understanding these commands is an important foundation for working effectively in Linux environments.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This project provided hands-on experience with fundamental Linux commands used in Linux administration and cybersecurity. These commands form the foundation for working efficiently in Linux environments.
