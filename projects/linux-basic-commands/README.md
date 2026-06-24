@@ -1,152 +1,173 @@
-### Linux Basic Commands
 
-## Objective
 
-The objective of this project was to learn and practice basic Linux commands used in cybersecurity and system administration.
+# Linux Basic Commands
 
-## Command 1: cd ~
+## Project Overview
 
-## What the command does
+This project demonstrates the use of fundamental Linux commands commonly used in system administration and cybersecurity. The commands covered include directory navigation, file creation, file management, and viewing file contents.
 
-The `cd ~` command changes the current directory to the user's home directory.
+## Environment
 
-## Screenshot
+* Operating System: Kali Linux
+* Shell: Bash Terminal
+
+---
+
+# Directory Navigation
+
+## Command: `cd ~`
+
+### Description
+
+The `cd ~` command changes the current working directory to the user's home directory.
+
+### Screenshot
 
 ![cd home command](screenshots/Screenshot%202026-06-18%20124838.png)
 
-## Command 2: mkdir
+---
 
-## What  the  command does
+## Command: `cd cyberlab`
 
-The ` mkdir` command is used to creat directories/folders
-for this lab we will create a folder called cyberlab
+### Description
 
-## Screenshot 
+The `cd` command is used to change directories. In this example, it is used to navigate into the `cyberlab` directory.
 
-![mkdir command](screenshots/Screenshot%202026-06-18%20124854.png)
-
-## Command 3: cd 
-
-## What  the command does 
-
-The `cd` command is used to change directories and move through the Linux file system.
-For this lab we will our directory to to cyberlab
-
-## Screenshot 
+### Screenshot
 
 ![cd command](screenshots/Screenshot%202026-06-18%20104701.png)
 
-## Command 4: pwd
+---
 
-## What the command does 
-The `pwd` command displays the current working directory.
+## Command: `pwd`
 
-## Screenshot
+### Description
+
+The `pwd` (Print Working Directory) command displays the full path of the current directory.
+
+### Screenshot
 
 ![pwd command](screenshots/Screenshot%202026-06-18%20115855.png)
 
-## Comand 5: touch 
+---
 
-## what the command does 
+# File and Directory Management
 
-The `touch` command creates a new empty file.
-For this lab we will create three empty files 
+## Command: `mkdir cyberlab`
 
-## Screenshot 
+### Description
+
+The `mkdir` command creates a new directory. In this lab, a directory named `cyberlab` was created.
+
+### Screenshot
+
+![mkdir command](screenshots/Screenshot%202026-06-18%20124854.png)
+
+---
+
+## Command: `touch`
+
+### Description
+
+The `touch` command creates new empty files. In this lab, multiple files were created for practice purposes.
+
+### Screenshot
 
 ![touch command](screenshots/Screenshot%202026-06-18%20115914.png)
 
-## Command 6: ls 
+---
 
-## what the command does 
+## Command: `ls`
 
-The `ls` command lists files and directories in the current folder.
+### Description
 
-## Screenshot 
+The `ls` command lists all files and directories in the current location.
+
+### Screenshot
 
 ![ls command](screenshots/Screenshot%202026-06-18%20115927.png)
 
-## Command 7: ls -l
+---
 
-## What the command does 
+## Command: `ls -l`
 
-The `ls -l` command displays files and directories in a detailed format, including permissions, ownership, file size, and modification date.
+### Description
 
-## Screenshot 
+The `ls -l` command displays files and directories in a detailed format, including permissions, ownership, file size, and modification dates.
+
+### Screenshots
 
 ![ls -l command](screenshots/Screenshot%202026-06-18%20115950.png)
+
 ![ls -l command](screenshots/Screenshot%202026-06-18%20120012.png)
 
-## Command 8: echo "I love cyber security" > notes.txt
+---
 
-### What the command does
+# Working with File Contents
 
-This command writes the text "I love cyber security" into a file called `notes.txt`. If the file does not exist, Linux creates it automatically.
+## Command: `echo "I love cyber security" > notes.txt`
 
-### Screenshot  
+### Description
+
+This command writes text to a file. If the file does not exist, Linux automatically creates it.
+
+### Screenshot
 
 ![echo command](screenshots/Screenshot%202026-06-18%20120025.png)
 
-## Command 9: cat 
+---
 
-## What the command does 
+## Command: `cat notes.txt`
 
-The `cat` command displays the contents of a file.
-For this lab we will display the contents in notes.txt
+### Description
 
-## Screenshot 
+The `cat` command displays the contents of a file directly in the terminal.
+
+### Screenshot
 
 ![cat command](screenshots/Screenshot%202026-06-18%20120037.png)
 
-## Command 10: echo "python is the best programming language" >> notes.txt
+---
 
-### What the command does
+## Command: `echo "python is the best programming language" >> notes.txt`
 
-This command appends the text "python is the best programming language" to the end of the file `notes.txt`.
+### Description
+
+The `>>` operator appends text to an existing file without overwriting its contents.
 
 ### Screenshot
 
 ![echo append command](screenshots/Screenshot%202026-06-18%20120144.png)
 
-## Lastly 
+---
 
-We  will display the data in notes.txt after we have appended it 
+## Viewing the Updated File
+
+### Description
+
+After appending additional text, the contents of the file were displayed again using the `cat` command.
+
+### Screenshot
 
 ![cat command](screenshots/Screenshot%202026-06-18%20120157.png)
 
+---
 
+## Key Skills Demonstrated
 
+* Linux directory navigation
+* Creating and managing directories
+* Creating files
+* Listing files and directories
+* Viewing file permissions
+* Reading file contents
+* Writing and appending data to files
 
+---
 
+## Conclusion
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This project provided practical experience with essential Linux commands used in everyday system administration and cybersecurity tasks. Understanding these commands is an important foundation for working effectively in Linux environments.
 
 
 
